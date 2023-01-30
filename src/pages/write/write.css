@@ -1,0 +1,70 @@
+.write {
+  padding-top: 50px;
+  height: auto;
+  margin: auto;
+  min-height: 700px;
+}
+
+.writeImg {
+  /* margin-left: 250px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.writeForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.writeFormGroup {
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+
+.writeInput:focus {
+  outline: none;
+}
+
+.writeText {
+  font-size: 20px;
+  height: 100vh;
+}
+.writeSubmit {
+  /* position: absolute; */
+  /* top: 20px;
+  right: 150px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;  */
+  background-color: #f18973;
+  margin: auto;
+  width: 80%;
+  color: #bc5a45;
+}
+
+.addPhoto {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  color: #bc5a45;
+  text-align: center;
+  margin: auto;
+}

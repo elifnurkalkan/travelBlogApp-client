@@ -1,0 +1,6 @@
+.diaries {
+  height: auto;
+  display: flex;
+
+  justify-content: space-around;
+}

@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Landing from './components/landingPart/Landing';
+import Topbar from './components/topbar/Topbar';
+import Diaries from './pages/diaries/Diaries';
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+import Profile from './pages/profile/Profile';
+import Register from './pages/register/Register';
+import Write from './pages/write/Write';
+import SingleDiaryPage from './pages/singleDiaryPage/SingleDiaryPage';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Context } from './context/Context';
 
 function App() {
+  const { user } = useContext(Context);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/diaries" element={<Diaries />} />
+        <Route path="/write" element={user ? <Write /> : <Register />} />
+        <Route path="/profile" element={user ? <Profile /> : <Register />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={user ? <Home /> : <Login />} />
+        <Route path="/diary/:diaryId" element={<SingleDiaryPage />} />
+      </Routes>
+    </Router>
   );
 }
 
